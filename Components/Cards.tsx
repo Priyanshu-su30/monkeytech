@@ -42,7 +42,7 @@ const StarRating: React.FC<StarRatingProps> = ({ rating, className }) => {
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
   const { name, title, text, rating, avatarUrl } = testimonial;
   return (
-    <div className="relative flex-shrink-0 w-[400px] md:w-[450px] bg-[#121212] border border-gray-800 rounded-2xl pl-4 pr-12 py-6 text-white space-y-6">
+    <div className="relative flex-shrink-0 w-3xl bg-[#121212] border border-gray-800 rounded-2xl pl-4 pr-12 py-6 text-white space-y-6">
       <div className="flex items-center space-x-2">
         <img
           src={avatarUrl}
@@ -56,11 +56,11 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
           }
         />
         <div>
-          <h3 className="font-bold text-sm tracking-wide">{name}</h3>
-          <p className="text-xs text-gray-400">{title}</p>
+          <h3 className="font-bold text-lg tracking-wide">{name}</h3>
+          <p className="text-md text-gray-400">{title}</p>
         </div>
       </div>
-      <p className="text-gray-300 text-xs leading-relaxed">
+      <p className="text-gray-300 text-md leading-relaxed">
         {text}
       </p>
       <StarRating rating={rating} />
