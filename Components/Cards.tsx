@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface Testimonial {
   name: string;
   title: string;
@@ -43,7 +45,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
   const { name, title, text, rating, avatarUrl } = testimonial;
   return (
     <div className="relative flex-shrink-0 w-xl md:w-3xl bg-[#121212] border border-gray-800 rounded-2xl pl-4 pr-12 py-6 text-white space-y-6">
-      <div className="flex items-center space-x-2">
+      <div className="relative z-10 flex items-center space-x-2">
         <img
           src={avatarUrl}
           alt={name}
@@ -60,10 +62,11 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
           <p className="text-sm md:text-md text-gray-400">{title}</p>
         </div>
       </div>
-      <p className="text-gray-300 text-sm md:text-md leading-relaxed">
+      <p className="relative z-10 text-gray-300 text-sm md:text-md leading-relaxed">
         {text}
       </p>
       <StarRating rating={rating} />
+      <Image src="/assets/TestimonialBkg.png" alt={"background"} width={200} height={100} className="absolute z-0 right-6 top-12 brightness-30" />
     </div>
   );
 };

@@ -132,52 +132,6 @@ export default function Home() {
 
         <div className="h-full overflow-y-auto no-scrollbar">
           {/* Hero Section */}
-          {/* <div className="h-screen bg-cover bg-no-repeat text-white px-20 py-15 animated-background bg-gradient-to-r from-[#AC7C00] via-[#0F0F0F] to-[#AC7C00]">
-            <div className="items-center pb-10">
-              <div className="flex justify-center items-start animate-[HeroFadeInLeft_1s_ease-out]">
-                <img src="/assets/Logo.png" alt="Your Company Logo" width={200} height={60}/>
-              </div>
-              <div className='flex flex-row gap-10 pt-32'>
-                <div className=' animate-[HeroFadeInLeft_1s_ease-out]'>
-                  <p className='text-7xl text-left font-normal'>Grow your Business with </p>
-                  <h1 className='text-7xl text-amber-200 pt-6'>Tech Monkeys</h1>
-                  
-                  <p className='text-lg pt-6'>Unlock growth, efficiency, and innovation with future-ready technology solutions.</p>
-                  <div className='pt-6 '>
-                    <button className='bg-white text-black text-md font-medium px-8 py-2 rounded-2xl'>Enquire Now</button>
-                  </div>
-                </div>
-                <div className=' bg-amber-300 rounded-lg text-lg text-black h-full p-10'>
-
-                  <div className='animate-[HeroFadeInLeft_2s_ease-out]'>
-                    <div className="flex flex-row flex-wrap items-center gap-12">
-                      <div className="*:data-[slot=avatar]:ring-background flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:grayscale">
-                        <Avatar>
-                          <AvatarImage src="https://www.techmonkey.us/clientpics/osman.jpg" alt="@osman" />
-                          <AvatarFallback>CN</AvatarFallback>
-                        </Avatar>
-                        <Avatar>
-                          <AvatarImage src="https://www.techmonkey.us/clientpics/vivi.jpg" alt="@vivi" />
-                          <AvatarFallback>LR</AvatarFallback>
-                        </Avatar>
-                        <Avatar>
-                          <AvatarImage
-                            src="https://www.techmonkey.us/clientpics/achyut.jpg"
-                            alt="@achyut"
-                          />
-                          <AvatarFallback>ER</AvatarFallback>
-                        </Avatar>
-                      </div>
-                    </div>
-
-                    <p className='py-4'>Trusted by more than 25 founders across the globe</p>
-                    <button className='text-sm underline flex'>View Testimonials -</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> */}
-
           <div className=" min-h-screen bg-cover bg-no-repeat text-white px-6 sm:px-10 md:px-20 py-10 md:py-15 animated-background bg-gradient-to-r from-[#AC7C00] via-[#0F0F0F] to-[#AC7C00]">
             <div className="items-center pb-10">
               {/* Logo */}
@@ -246,18 +200,6 @@ export default function Home() {
           </div>
 
           {/*Our Associations Section */}
-          
-          {/* <div className="bg-white py-10 px-15">
-            <h2 className="text-center text-xl text-gray-800">Our Associations</h2>
-            <div className='flex flex-row justify-between px-3 pt-5'>
-              <img src="https://www.techmonkey.us/_next/image?url=%2Fgoogle%20cloud.png&w=640&q=75" alt="Google" width={150} height={50} />
-              <img src="https://www.techmonkey.us/_next/image?url=%2Faws.png&w=256&q=75" alt="AWS" width={150} height={50} />
-              <img src="https://www.techmonkey.us/_next/image?url=%2Fadobe.png&w=640&q=75" alt="Adobe" width={150} height={50} />
-              <img src="https://www.techmonkey.us/_next/image?url=%2FSAP.png&w=640&q=75" alt="SAP" width={150} height={50} />
-              <img src="https://www.techmonkey.us/_next/image?url=%2Fsalesforce.png&w=640&q=75" alt="Salesforce" width={150} height={50} />
-            </div>
-          </div> */}
-
           <div className="bg-white py-10 px-6 sm:px-10 md:px-15">
             <h2 className="text-center text-xl sm:text-2xl text-gray-800 font-semibold">
               Our Associations
@@ -437,36 +379,6 @@ export default function Home() {
           </div>
 
           {/* About Us Section */}
-          {/* <div className='bg-[#0F0F0F]'>
-            <div className='px-32 text-center py-20'>
-
-              <h1 className='text-4xl pb-4'>About Us</h1>
-              <p className='text-md tracking-wider'>Tech Monkey is a dynamic tech company founded by Varun, an Oxford MBA with extensive expertise in entrepreneurship, and Jainam, a visionary entrepreneur who co-built and sold their IT startup to Amazon alongside Varun. Together, they bring over eight years of combined experience in IT, sales, and CRM, creating a foundation of innovation and excellence. Headquartered in Dubai, with offices in the United Kingdom and the United States, Tech Monkey specializes in developing customized technology solutions tailored to the needs of modern businesses. Our mission is to empower organizations to thrive in a digital-first world by streamlining processes, enhancing customer experiences, and driving sustainable growth. At Tech Monkey, Varun and Jainam's unique blend of technical expertise and strategic insight fuels our commitment to delivering cutting-edge solutions. Together, they lead a team dedicated to shaping the future of IT with creativity, precision, and impact.</p>
-              
-            </div>
-
-            
-            <div className='px-32 py-15 flex gap-4'>
-              {cardData.map((card) => (
-                <div key={card.title} className="w-1/3 h-full rounded-md bg-gradient-to-br from-yellow-300 to-black p-0.5">
-                  <div className="w-full h-full rounded-md bg-black p-6 font-thin">
-                    <h3 className="text-lg font-medium mb-2">{card.title}</h3>
-                    <p className="text-4xl font-bold">
-                      <CountUp
-                        from={1}
-                        to={card.value}
-                        separator=","
-                        direction="up"
-                        duration={0.5}
-                        className="count-up-text"
-                      />+
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div> */}
-
           <div className="bg-[#0F0F0F] text-white">
             {/* About Us Section */}
             <div className="px-4 sm:px-8 md:px-16 lg:px-32 text-center py-10 md:py-20">
@@ -513,33 +425,6 @@ export default function Home() {
           </div>
 
           {/* Testimonials */}
-          {/* <div className='bg-[#141414] py-10 bg-radial-[at_50%_125%] from-yellow-600 to-zinc-900 to-75%'>
-            <h1 className='text-4xl flex justify-center items-center'>Testimonials</h1>
-              <style>{`.hide-scrollbar::-webkit-scrollbar {
-                display: none;
-                }
-                .hide-scrollbar {
-                  -ms-overflow-style: none;
-                  scrollbar-width: none;
-                }`}
-              </style>
-            
-            <div className="flex items-center justify-center overflow-hidden">
-              <div 
-                className="hide-scrollbar overflow-x-auto flex space-x-8 p-8 md:p-12 cursor-grab active:cursor-grabbing select-none w-full"
-                ref={sliderRef}
-                onMouseDown={handleMouseDown}
-                onMouseLeave={handleMouseLeave}
-                onMouseUp={handleMouseUp}
-                onMouseMove={handleMouseMove}
-              >
-                {testimonialsCardData.map((testimonial, index) => (
-                  <TestimonialCard key={index} testimonial={testimonial} />
-                ))}
-              </div>
-            </div>
-          </div> */}
-
           <div className="bg-[#141414] py-10 bg-radial-[at_50%_125%] from-yellow-600 to-zinc-900 to-75%">
             {/* Heading */}
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold flex justify-center items-center text-white">
