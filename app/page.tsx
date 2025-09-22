@@ -117,61 +117,137 @@ export default function Home() {
     sliderRef.current.scrollLeft = scrollLeft - walk;
   };
 
+  const [isAnimated, setIsAnimated] = useState(false);
+
+  const triggerAnimation = () => {
+    if (!isAnimated) {
+      setIsAnimated(true);
+    }
+  };
+
   return (
     <div className="bg-[#0F0F0F] flex items-center justify-center">
 
       <div className="relative w-full bg-[#0F0F0F] rounded-4xl shadow-2xl flex flex-col">
 
-        <div className=" h-full overflow-y-auto mt-4 pr-2 no-scrollbar">
+        <div className="h-full overflow-y-auto no-scrollbar">
           {/* Hero Section */}
-          <div className="bg-cover bg-no-repeat text-white px-15 py-20 animated-background bg-gradient-to-r from-[#AC7C00] via-[#0F0F0F] to-[#AC7C00]">
+          {/* <div className="h-screen bg-cover bg-no-repeat text-white px-20 py-15 animated-background bg-gradient-to-r from-[#AC7C00] via-[#0F0F0F] to-[#AC7C00]">
             <div className="items-center pb-10">
               <div className="flex justify-center items-start animate-[HeroFadeInLeft_1s_ease-out]">
-                <img src="https://www.techmonkey.us/_next/image?url=%2Ftechmonkeys2.png&w=640&q=75" alt="Your Company Logo" width={150} height={50}/>
+                <img src="/assets/Logo.png" alt="Your Company Logo" width={200} height={60}/>
               </div>
-              <div className='flex flex-row gap-12 pt-13'>
-                  <div className='w-2/3 animate-[HeroFadeInLeft_1s_ease-out]'>
-                    <p className='text-2xl text-left font-normal'>
-                      Grow your Business with </p>
-                      <h1 className='text-4xl text-amber-200'>Tech Monkeys</h1>
-                    
-                    <p className='text-lg pt-6'>Unlock growth, efficiency, and innovation with future-ready technology solutions.</p>
-                    <div className='pt-6 '>
-                      <button className='bg-white text-black text-md font-medium px-8 py-2 rounded-2xl'>Enquire Now</button>
-                    </div>
+              <div className='flex flex-row gap-10 pt-32'>
+                <div className=' animate-[HeroFadeInLeft_1s_ease-out]'>
+                  <p className='text-7xl text-left font-normal'>Grow your Business with </p>
+                  <h1 className='text-7xl text-amber-200 pt-6'>Tech Monkeys</h1>
+                  
+                  <p className='text-lg pt-6'>Unlock growth, efficiency, and innovation with future-ready technology solutions.</p>
+                  <div className='pt-6 '>
+                    <button className='bg-white text-black text-md font-medium px-8 py-2 rounded-2xl'>Enquire Now</button>
                   </div>
-                <div className='w-1/3 bg-amber-300 rounded-lg text-lg text-black h-full p-4'>
+                </div>
+                <div className=' bg-amber-300 rounded-lg text-lg text-black h-full p-10'>
 
                   <div className='animate-[HeroFadeInLeft_2s_ease-out]'>
                     <div className="flex flex-row flex-wrap items-center gap-12">
                       <div className="*:data-[slot=avatar]:ring-background flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:grayscale">
                         <Avatar>
-                          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+                          <AvatarImage src="https://www.techmonkey.us/clientpics/osman.jpg" alt="@osman" />
                           <AvatarFallback>CN</AvatarFallback>
                         </Avatar>
                         <Avatar>
-                          <AvatarImage src="https://github.com/leerob.png" alt="@leerob" />
+                          <AvatarImage src="https://www.techmonkey.us/clientpics/vivi.jpg" alt="@vivi" />
                           <AvatarFallback>LR</AvatarFallback>
                         </Avatar>
                         <Avatar>
                           <AvatarImage
-                            src="https://github.com/evilrabbit.png"
-                            alt="@evilrabbit"
+                            src="https://www.techmonkey.us/clientpics/achyut.jpg"
+                            alt="@achyut"
                           />
                           <AvatarFallback>ER</AvatarFallback>
                         </Avatar>
                       </div>
                     </div>
 
-                    <p className='py-2'>Trusted by more than 25 founders across the globe</p>
+                    <p className='py-4'>Trusted by more than 25 founders across the globe</p>
                     <button className='text-sm underline flex'>View Testimonials -</button>
                   </div>
                 </div>
               </div>
             </div>
+          </div> */}
+
+          <div className=" min-h-screen bg-cover bg-no-repeat text-white px-6 sm:px-10 md:px-20 py-10 md:py-15 animated-background bg-gradient-to-r from-[#AC7C00] via-[#0F0F0F] to-[#AC7C00]">
+            <div className="items-center pb-10">
+              {/* Logo */}
+              <div className="flex justify-center items-start animate-[HeroFadeInLeft_1s_ease-out]">
+                <img src="/assets/Logo.png" alt="Your Company Logo" className="w-40 sm:w-48 md:w-[200px] h-auto"/>
+              </div>
+
+              {/* Main Section */}
+              <div className="flex flex-col md:flex-row gap-10 pt-16 md:pt-32">
+                {/* Left Text Section */}
+                <div className="animate-[HeroFadeInLeft_1s_ease-out] text-center md:text-left">
+                  <p className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-normal">
+                    Grow your Business with
+                  </p>
+                  <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-amber-200 pt-4 md:pt-6">
+                    Tech Monkeys
+                  </h1>
+
+                  <p className="text-base sm:text-lg pt-4 md:pt-6 max-w-xl mx-auto md:mx-0">
+                    Unlock growth, efficiency, and innovation with future-ready technology
+                    solutions.
+                  </p>
+
+                  <div className="pt-6">
+                    <button className="bg-white text-black text-sm sm:text-md font-medium px-6 sm:px-8 py-2 rounded-2xl">
+                      Enquire Now
+                    </button>
+                  </div>
+                </div>
+
+                {/* Right Testimonial Section */}
+                <div className="bg-amber-300 rounded-lg text-base sm:text-lg text-black p-6 sm:p-8 md:p-10 flex flex-col justify-center items-center md:items-start">
+                  <div className="animate-[HeroFadeInLeft_2s_ease-out] w-full">
+                    {/* Avatars */}
+                    <div className="flex flex-row flex-wrap items-center justify-center md:justify-start gap-6 sm:gap-12">
+                      <div className="*:data-[slot=avatar]:ring-background flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:grayscale">
+                        <Avatar>
+                          <AvatarImage src="https://www.techmonkey.us/clientpics/osman.jpg" alt="@osman" />
+                          <AvatarFallback>CN</AvatarFallback>
+                        </Avatar>
+                        <Avatar>
+                          <AvatarImage src="https://www.techmonkey.us/clientpics/vivi.jpg" alt="@vivi" />
+                          <AvatarFallback>LR</AvatarFallback>
+                        </Avatar>
+                        <Avatar>
+                          <AvatarImage
+                            src="https://www.techmonkey.us/clientpics/achyut.jpg"
+                            alt="@achyut"
+                          />
+                          <AvatarFallback>ER</AvatarFallback>
+                        </Avatar>
+                      </div>
+                    </div>
+
+                    {/* Text + Button */}
+                    <p className="py-4 text-center md:text-left">
+                      Trusted by more than 25 founders across the globe
+                    </p>
+                    <button className="text-sm underline flex justify-center md:justify-start">
+                      View Testimonials -
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+
           {/*Our Associations Section */}
-          <div className="bg-white py-10 px-15">
+          
+          {/* <div className="bg-white py-10 px-15">
             <h2 className="text-center text-xl text-gray-800">Our Associations</h2>
             <div className='flex flex-row justify-between px-3 pt-5'>
               <img src="https://www.techmonkey.us/_next/image?url=%2Fgoogle%20cloud.png&w=640&q=75" alt="Google" width={150} height={50} />
@@ -180,15 +256,49 @@ export default function Home() {
               <img src="https://www.techmonkey.us/_next/image?url=%2FSAP.png&w=640&q=75" alt="SAP" width={150} height={50} />
               <img src="https://www.techmonkey.us/_next/image?url=%2Fsalesforce.png&w=640&q=75" alt="Salesforce" width={150} height={50} />
             </div>
+          </div> */}
+
+          <div className="bg-white py-10 px-6 sm:px-10 md:px-15">
+            <h2 className="text-center text-xl sm:text-2xl text-gray-800 font-semibold">
+              Our Associations
+            </h2>
+
+            <div className="flex flex-wrap justify-center sm:justify-between items-center gap-6 sm:gap-10 pt-6">
+              <img
+                src="https://www.techmonkey.us/_next/image?url=%2Fgoogle%20cloud.png&w=640&q=75"
+                alt="Google"
+                className="h-10 sm:h-12 md:h-14 w-auto object-contain"
+              />
+              <img
+                src="https://www.techmonkey.us/_next/image?url=%2Faws.png&w=256&q=75"
+                alt="AWS"
+                className="h-10 sm:h-12 md:h-14 w-auto object-contain"
+              />
+              <img
+                src="https://www.techmonkey.us/_next/image?url=%2Fadobe.png&w=640&q=75"
+                alt="Adobe"
+                className="h-10 sm:h-12 md:h-14 w-auto object-contain"
+              />
+              <img
+                src="https://www.techmonkey.us/_next/image?url=%2FSAP.png&w=640&q=75"
+                alt="SAP"
+                className="h-10 sm:h-12 md:h-14 w-auto object-contain"
+              />
+              <img
+                src="https://www.techmonkey.us/_next/image?url=%2Fsalesforce.png&w=640&q=75"
+                alt="Salesforce"
+                className="h-10 sm:h-12 md:h-14 w-auto object-contain"
+              />
+            </div>
           </div>
 
           {/* Porfolio Section */}
           <div>
-             <section className="flex items-center justify-center bg-[#0F0F0F] px-4 pt-4 pb-20">
+            <section className="flex items-center min-h-screen justify-center bg-[#0F0F0F] px-4 sm:px-6 md:px-10 pt-4 pb-20">
               <div className="relative w-full overflow-hidden rounded-2xl">
-                
+
                 {/* Main Content & Image Container */}
-                <div className="relative h-[500px]">
+                <div className="relative min-h-screen md:h-auto">
                   {slidesData.map((slide, index) => (
                     <div
                       key={index}
@@ -196,108 +306,140 @@ export default function Home() {
                         activeIndex === index ? 'opacity-100' : 'opacity-0'
                       }`}
                     >
-                      <div className="bg-gradient-to-br from-[#FFD34D] to-[#B48700] h-full flex flex-row gap-3">
-                        
-                        {/* Left Side: Text Content */}
-                        <div className="justify-between text-black p-10">
-                          <div>
-                            <span className="mb-6 inline-block rounded-full bg-yellow-300/30 px-2 py-2 text-md border border-white">
-                              {slide.superTitle}
-                            </span>
-                            <h1 className="text-5xl leading-tight pt-5">
-                              {slide.title}
-                            </h1>
-                            <p className="text-lg pt-3">{slide.subtitle}</p>
-                          <div className="mt-4">
-                            <button className="text-md rounded-4xl bg-gray-900 px-4 py-2 text-white text-xs transition hover:bg-gray-800">
-                              View Project
-                            </button>
-                          </div>
-                          </div>
+                      <div className="bg-gradient-to-br from-[#FFD34D] to-[#B48700] h-full flex flex-col md:flex-row gap-6 md:gap-10">
 
+                        {/* Left Side: Text Content */}
+                        <div className="flex flex-col justify-between text-black px-4 py-10 sm:p-6 md:p-10 lg:p-15 md:w-1/2">
+                          <div className="mb-4 sm:mb-6 rounded-full bg-yellow-300/30 px-2 py-1 text-sm sm:text-md border border-white">
+                            {slide.superTitle}
+                          </div>
+                          <h1 className="text-3xl sm:text-4xl md:text-5xl leading-snug pt-3 sm:pt-3">
+                            {slide.title}
+                          </h1>
+                          <p className="text-base sm:text-lg md:text-xl pt-3 sm:pt-3">
+                            {slide.subtitle}
+                          </p>
+                          <div className="flex flex-col gap-10 mt-5 sm:mt-5">
+                            <div>
+                              <button className="text-lg sm:text-xl rounded-full bg-gray-900 px-6 sm:px-8 py-3 sm:py-4 text-white transition hover:bg-gray-800">
+                                View Project
+                              </button>
+                            </div>
+
+                            {/* Bottom Navigation Dots */}
+                            <div className="left-4 sm:left-8  flex items-center space-x-2 sm:space-x-3">
+                              {slidesData.map((_, index) => (
+                                <button
+                                  key={index}
+                                  onClick={() => setActiveIndex(index)}
+                                  className={`h-3 sm:h-4 rounded-full transition-all duration-300 ${
+                                    activeIndex === index ? 'w-10 sm:w-15 bg-black' : 'w-3 sm:w-4 bg-white'
+                                  }`}
+                                  aria-label={`Go to slide ${index + 1}`}
+                                />
+                              ))}
+                            </div>
+                          </div>
                         </div>
 
                         {/* Right Side: Embed */}
-                        <div className="text-black relative h-full md:block">
+                        <div className="relative h-full md:block">
                           <iframe
                             src={slide.websiteUrl}
                             title={slide.title}
                             width={800}
-                            height={600}
-                            scrolling='no'
-                            className=" scale-[.85] origin-bottom-right rounded-tl-[40px]"
+                            height={800}
+                            scrolling="no"
+                            className=" md:scale-[0.85] scale-100 origin-bottom-right rounded-tl-[20px] sm:rounded-tl-[30px] md:rounded-tl-[40px]"
                             loading="lazy"
                           />
                         </div>
+
                       </div>
                     </div>
                   ))}
                 </div>
 
-                {/* Bottom Navigation Dots */}
-                <div className="absolute bottom-12 left-10 z-10 flex items-center space-x-3">
-                  {slidesData.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setActiveIndex(index)}
-                      className={`h-2 rounded-full transition-all duration-300 ${
-                        activeIndex === index ? 'w-8 bg-black' : 'w-2 bg-white'
-                      }`}
-                      aria-label={`Go to slide ${index + 1}`}
-                    />
-                  ))}
-                </div>
               </div>
             </section>
           </div>
 
+
           {/* Services Section */}
-          <div className='px-32 py-10 text-center bg-[#141414]'>
+          <div className="px-4 sm:px-8 md:px-16 lg:px-32 py-10 text-center bg-[#141414] text-white">
+            {/* Header */}
             <div>
-              <h1 className='text-5xl pb-4'>Our Services</h1>
-              <p className='text-lg'>At Tech Monkey, we deliver innovative, tailored solution to meet your business needs. Our experienced team ensures every solution address current demands and supports future growth. We specialize in key tech areas that help your business stay competitive and thrive in digital-first world.</p>
+              <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold pb-4">Our Services</h1>
+              <p className="text-sm sm:text-base md:text-lg max-w-5xl mx-auto leading-relaxed text-gray-300">
+                At Tech Monkey, we deliver innovative, tailored solutions to meet your business needs. 
+                Our experienced team ensures every solution addresses current demands and supports 
+                future growth. We specialize in key tech areas that help your business stay competitive 
+                and thrive in a digital-first world.
+              </p>
             </div>
-            {/*cards */}
-            <div className='flex items-center justify-center'>
-              <div className='h-auto max-w-10/12 grid grid-cols-3 grid-rows-2 gap-4 text-left pt-15 '>
 
-                <div className='relative row-span-2 w-full h-full rounded-xl p-5 bg-gradient-to-b from-[#313131] via-[#241B00] to-[#000000] animate-[fadeInLeft_1s_ease-out_forwards]'>{/*card1*/}
-                  <h1 className='text-white text-2xl'>Web Development and Design</h1>
-                  <p className='text-sm pb-96'>unlock growth, efficiency and innovation with future-readytechnolygy solutions tailored to your unique needs.</p>
-                  <Image src="/assets/WDD1.png" alt="image1" width={300} height={300} className='absolute bottom-0 right-0'/>
+            {/* Cards */}
+            <div onClick={triggerAnimation} className={`min-h-screen flex items-center justify-center ${isAnimated ? '' : 'cursor-pointer '}`}>
+              <div className="h-auto w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left pt-10">
+                
+                {/* Card 1 */}
+                <div className={`relative row-span-2 w-full h-full lg:min-h-screen rounded-xl p-5 bg-gradient-to-b from-[#313131] via-[#241B00] to-[#000000] 
+                  ${isAnimated ? 'animate-[fadeInLeft_1s_ease-out_forwards] sm:animate-[fadeInDown_1s_ease-out_forwards] lg:animate-[fadeInLeft_1s_ease-out_forwards]' : 'invisible'}`}>
+                  <h1 className="relative z-10 text-xl sm:text-2xl font-semibold">Web Development and Design</h1>
+                  <p className="relative z-10 text-xs sm:text-sm md:text-base">
+                    Unlock growth, efficiency and innovation with future-ready technology solutions tailored to your unique needs.
+                  </p>
+                  <Image src="/assets/WDD1.png" alt="image1" width={350} height={350} className="absolute bottom-0 right-0 w-1/3 sm:w-1/2 lg:w-[300px] z-0" />
                 </div>
 
-                <div className='relative bg-gray-500 rounded-xl p-5 bg-gradient-to-b from-[#313131] via-[#000000] to-[#241B00] animate-[fadeInDown_1s_ease-out_forwards]'>{/*card2*/}
-                  <h1 className='text-white text-2xl'>Mobile App Development</h1>
-                  <p className='text-sm'>unlock growth, efficiency and innovation with future-readytechnolygy solutions tailored to your unique needs.</p>
-                  <Image src="/assets/MAD1.png" alt="image2" width={100} height={100} className='absolute bottom-0 right-7'/>
-                  <Image src="/assets/MAD2.png" alt="image3" width={70} height={70} className='absolute bottom-5 right-20'/>
-                  
+                {/* Card 2 */}
+                <div className={`relative rounded-xl p-5 bg-gradient-to-b from-[#313131] via-[#000000] to-[#241B00]
+                              ${isAnimated ? 'animate-[fadeInLeft_1s_ease-out_forwards] sm:animate-[fadeInDown_1s_ease-out_forwards]' : 'invisible'}`}>
+                  <h1 className="relative z-10 text-xl sm:text-2xl font-semibold">Mobile App Development</h1>
+                  <p className="relative z-10 text-xs sm:text-sm md:text-base">
+                    Unlock growth, efficiency and innovation with future-ready technology solutions tailored to your unique needs.
+                  </p>
+                  <Image src="/assets/MAD1.png" alt="image2" width={100} height={100} className="absolute bottom-0 right-5 w-16 sm:w-20 md:w-[100px] z-0" />
+                  <Image src="/assets/MAD2.png" alt="image3" width={70} height={70} className="absolute bottom-5 right-16 w-10 sm:w-14 md:w-[70px] z-0" />
                 </div>
 
-                <div className='relative bg-gray-500 rounded-xl p-5 bg-gradient-to-b from-[#313131] via-[#000000] to-[#241B00] animate-[fadeInRight_1s_ease-out_forwards]'>{/*card3*/}
-                  <h1 className='text-white text-2xl'>Real Estate Solutions</h1>
-                  <p className='text-sm'>unlock growth, efficiency and innovation with future-readytechnolygy solutions tailored to your unique needs.</p>
-                  <Image src="/assets/RES1.png" alt="image4" width={150} height={150} className='absolute bottom-0 right-0'/>
+                {/* Card 3 */}
+                <div className={`relative rounded-xl p-5 bg-gradient-to-b from-[#313131] via-[#000000] to-[#241B00]
+                              ${isAnimated ? 'animate-[fadeInLeft_1s_ease-out_forwards] sm:animate-[fadeInRight_1s_ease-out_forwards]' : 'invisible'}`}>
+                  <h1 className="relative z-10 text-xl sm:text-2xl font-semibold">Real Estate Solutions</h1>
+                  <p className="relative z-10 text-xs sm:text-sm md:text-base">
+                    Unlock growth, efficiency and innovation with future-ready technology solutions tailored to your unique needs.
+                  </p>
+                  <Image src="/assets/RES1.png" alt="image4" width={150} height={150} className="absolute bottom-0 right-0 w-20 sm:w-28 md:w-[150px] z-0" />
                 </div>
 
-                <div className='relative bg-gray-500 rounded-xl p-5 bg-gradient-to-b from-[#313131] via-[#000000] to-[#241B00] animate-[fadeInUp_1s_ease-out_forwards]'>{/*card4*/}
-                  <h1 className='text-white text-2xl'>E Commerce Solutions</h1>
-                  <p className='text-sm'>unlock growth, efficiency and innovation with future-readytechnolygy solutions tailored to your unique needs.</p>
-                  <Image src="/assets/ECS1.png" alt="image5" width={150} height={150} className='absolute bottom-0 right-0'/>
+                {/* Card 4 */}
+                <div className={`relative rounded-xl p-5 bg-gradient-to-b from-[#313131] via-[#000000] to-[#241B00]
+                              ${isAnimated ? 'animate-[fadeInLeft_1s_ease-out_forwards] sm:animate-[fadeInUp_1s_ease-out_forwards]' : 'invisible'}`}>
+                  <h1 className="relative z-10 text-xl sm:text-2xl font-semibold">E-Commerce Solutions</h1>
+                  <p className="relative z-10 text-xs sm:text-sm md:text-base">
+                    Unlock growth, efficiency and innovation with future-ready technology solutions tailored to your unique needs.
+                  </p>
+                  <Image src="/assets/ECS1.png" alt="image5" width={150} height={150} className="absolute bottom-0 right-0 w-20 sm:w-28 md:w-[150px] z-0" />
                 </div>
 
-                <div className='relative bg-gray-500 rounded-xl p-5 bg-gradient-to-b from-[#313131] via-[#000000] to-[#241B00] animate-[fadeInRight_1s_ease-out_forwards]'>{/*card5*/}
-                  <h1 className='text-white text-2xl'>Tech Supporting Consulting</h1>
-                  <p className='text-sm'>unlock growth, efficiency and innovation with future-readytechnolygy solutions tailored to your unique needs.</p>
-                  <Image src="/assets/TSC.png" alt="image6" width={150} height={150} className='absolute bottom-0 right-0'/>
+                {/* Card 5 */}
+                <div className={`relative rounded-xl p-5 bg-gradient-to-b from-[#313131] via-[#000000] to-[#241B00]
+                              ${isAnimated ? 'animate-[fadeInLeft_1s_ease-out_forwards] sm:animate-[fadeInUp_1s_ease-out_forwards] lg:animate-[fadeInRight_1s_ease-out_forwards]' : 'invisible'}`}>
+                  <h1 className="relative z-10 text-xl sm:text-2xl font-semibold">Tech Support & Consulting</h1>
+                  <p className="relative z-10 text-xs sm:text-sm md:text-base">
+                    Unlock growth, efficiency and innovation with future-ready technology solutions tailored to your unique needs.
+                  </p>
+                  <Image src="/assets/TSC.png" alt="image6" width={150} height={150} className="absolute bottom-0 right-0 w-20 sm:w-28 md:w-[150px] z-0" />
                 </div>
+
               </div>
             </div>
           </div>
 
+
           {/* About Us Section */}
-          <div className='bg-[#0F0F0F]'>
+          {/* <div className='bg-[#0F0F0F]'>
             <div className='px-32 text-center py-20'>
 
               <h1 className='text-4xl pb-4'>About Us</h1>
@@ -305,7 +447,7 @@ export default function Home() {
               
             </div>
 
-            {/*Cards */}
+            
             <div className='px-32 py-15 flex gap-4'>
               {cardData.map((card) => (
                 <div key={card.title} className="w-1/3 h-full rounded-md bg-gradient-to-br from-yellow-300 to-black p-0.5">
@@ -325,10 +467,55 @@ export default function Home() {
                 </div>
               ))}
             </div>
+          </div> */}
+
+          <div className="bg-[#0F0F0F] text-white">
+            {/* About Us Section */}
+            <div className="px-4 sm:px-8 md:px-16 lg:px-32 text-center py-10 md:py-20">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold pb-4">About Us</h1>
+              <p className="text-sm sm:text-base md:text-lg tracking-wide leading-relaxed text-gray-300">
+                Tech Monkey is a dynamic tech company founded by Varun, an Oxford MBA with extensive
+                expertise in entrepreneurship, and Jainam, a visionary entrepreneur who co-built and
+                sold their IT startup to Amazon alongside Varun. Together, they bring over eight years
+                of combined experience in IT, sales, and CRM, creating a foundation of innovation and
+                excellence. Headquartered in Dubai, with offices in the United Kingdom and the United
+                States, Tech Monkey specializes in developing customized technology solutions tailored
+                to the needs of modern businesses. Our mission is to empower organizations to thrive in
+                a digital-first world by streamlining processes, enhancing customer experiences, and
+                driving sustainable growth. At Tech Monkey, Varun and Jainam's unique blend of technical
+                expertise and strategic insight fuels our commitment to delivering cutting-edge
+                solutions. Together, they lead a team dedicated to shaping the future of IT with
+                creativity, precision, and impact.
+              </p>
+            </div>
+
+            {/* Cards Section */}
+            <div className="px-4 sm:px-8 md:px-16 lg:px-32 py-10 md:py-15 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {cardData.map((card) => (
+                <div
+                  key={card.title}
+                  className="rounded-md bg-gradient-to-br from-yellow-300 to-black p-0.5"
+                >
+                  <div className="w-full h-full rounded-md bg-black p-6 font-thin text-center sm:text-left">
+                    <h3 className="text-base sm:text-lg font-medium mb-2">{card.title}</h3>
+                    <p className="text-2xl sm:text-3xl md:text-4xl font-bold">
+                      <CountUp
+                        from={1}
+                        to={card.value}
+                        separator=","
+                        direction="up"
+                        duration={0.5}
+                        className="count-up-text"
+                      />+
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Testimonials */}
-          <div className='bg-[#141414] py-10 bg-radial-[at_50%_125%] from-yellow-600 to-zinc-900 to-75%'>
+          {/* <div className='bg-[#141414] py-10 bg-radial-[at_50%_125%] from-yellow-600 to-zinc-900 to-75%'>
             <h1 className='text-4xl flex justify-center items-center'>Testimonials</h1>
               <style>{`.hide-scrollbar::-webkit-scrollbar {
                 display: none;
@@ -353,10 +540,50 @@ export default function Home() {
                 ))}
               </div>
             </div>
+          </div> */}
+
+          <div className="bg-[#141414] py-10 bg-radial-[at_50%_125%] from-yellow-600 to-zinc-900 to-75%">
+            {/* Heading */}
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold flex justify-center items-center text-white">
+              Testimonials
+            </h1>
+
+            {/* Hide scrollbar CSS */}
+            <style>{`
+              .hide-scrollbar::-webkit-scrollbar {
+                display: none;
+              }
+              .hide-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+              }
+            `}</style>
+
+            {/* Scrollable Container */}
+            <div className="flex items-center justify-center overflow-hidden">
+              <div
+                className="hide-scrollbar overflow-x-auto flex space-x-4 sm:space-x-6 md:space-x-8 p-4 sm:p-6 md:p-8 lg:p-12 cursor-grab active:cursor-grabbing select-none w-full"
+                ref={sliderRef}
+                onMouseDown={handleMouseDown}
+                onMouseLeave={handleMouseLeave}
+                onMouseUp={handleMouseUp}
+                onMouseMove={handleMouseMove}
+              >
+                {testimonialsCardData.map((testimonial, index) => (
+                  <div
+                    key={index}
+                    className="min-w-[250px] sm:min-w-[300px] md:min-w-[350px] lg:min-w-[400px] flex-shrink-0"
+                  >
+                    <TestimonialCard testimonial={testimonial} />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
+
           {/* Footer Section */}
-          <div className='bg-[#141414] py-15 px-24'>
+          {/* <div className='bg-[#141414] py-15 px-24'>
             <div>
               <p className='text-5xl font-bold '>Do you have</p>
               <p className='text-5xl font-bold pb-4'>any questions?</p>
@@ -395,6 +622,68 @@ export default function Home() {
                 </div>
                 <div className='text-md text-gray-500'>At Tech Monkey, we specialize in delivering a range of innovative solutions tailored to meet your business needs</div>
                 <div className='text-md text-gray-500'>© 2024 — Copyright</div>
+              </div>
+            </div>
+          </div> */}
+
+          <div className="bg-[#141414] py-10 md:py-15 px-6 sm:px-12 md:px-24 text-white">
+            {/* Headline */}
+            <div className="text-center md:text-left">
+              <p className="text-3xl sm:text-4xl md:text-5xl font-bold">Do you have</p>
+              <p className="text-3xl sm:text-4xl md:text-5xl font-bold pb-4">any questions?</p>
+              <p className="text-base sm:text-lg pb-4 max-w-xl mx-auto md:mx-0">
+                Feel free to send us your question or request a free consultation
+              </p>
+              <button className="py-2 px-6 bg-[#FFC43C] text-sm sm:text-md text-black rounded-lg">
+                Send a message
+              </button>
+              <div className="text-gray-500 text-sm sm:text-md py-8">Disclaimer +</div>
+            </div>
+
+            {/* Navigation Links */}
+            <div className="text-sm sm:text-md flex flex-wrap justify-center md:justify-start gap-4 sm:gap-6 pb-8">
+              <div>Services</div>
+              <div>Pricing</div>
+              <div>Sale</div>
+              <div>Blog</div>
+              <div>Contacts</div>
+            </div>
+
+            {/* Bottom Section */}
+            <div className="flex flex-col md:flex-row justify-between gap-10">
+              {/* Contact Info */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 flex-1">
+                <div>
+                  <div className="text-sm sm:text-lg text-gray-500">SIGN UP</div>
+                  <div className="text-base sm:text-lg">+971 585857795</div>
+                  <div className="text-base sm:text-lg">+971 585605980</div>
+                </div>
+                <div>
+                  <div className="text-sm sm:text-lg text-gray-500">OPENING HOURS</div>
+                  <div className="text-lg sm:text-xl">24/7</div>
+                </div>
+                <div>
+                  <div className="text-sm sm:text-lg text-gray-500">EMAIL</div>
+                  <div className="text-lg sm:text-xl break-all">
+                    support@techmonkey.us
+                  </div>
+                </div>
+              </div>
+
+              {/* Logo + About */}
+              <div className="text-center md:text-right md:w-1/3 flex flex-col gap-4">
+                <div className="flex justify-center md:justify-end">
+                  <img
+                    src="https://www.techmonkey.us/_next/image?url=%2Ftechmonkeys2.png&w=640&q=75"
+                    alt="Your Company Logo"
+                    className="w-40 sm:w-48 md:w-[200px] h-auto"
+                  />
+                </div>
+                <div className="text-sm sm:text-md text-gray-500">
+                  At Tech Monkey, we specialize in delivering a range of innovative
+                  solutions tailored to meet your business needs
+                </div>
+                <div className="text-sm sm:text-md text-gray-500">© 2024 — Copyright</div>
               </div>
             </div>
           </div>
