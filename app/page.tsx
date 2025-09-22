@@ -4,6 +4,7 @@ import React, { useState, useRef, MouseEvent } from 'react';
 import TestimonialCard from '@/Components/Cards';
 import {Avatar, AvatarFallback, AvatarImage, } from "../Components/ui/avatar"
 import Image from 'next/image';
+import Aurora from '@/Components/Aurora';
 
 type Slide = {
   superTitle: string;
@@ -131,9 +132,10 @@ export default function Home() {
       <div className="relative w-full bg-[#0F0F0F] rounded-4xl shadow-2xl flex flex-col">
 
         <div className="h-full overflow-y-auto no-scrollbar">
+        <Aurora colorStops={["#AC7C00", "#AC7C00", "#AC7C00"]} blend={0.5} amplitude={1.0} speed={0.5} />
           {/* Hero Section */}
-          <div className=" min-h-screen bg-cover bg-no-repeat text-white px-6 sm:px-10 md:px-20 py-10 md:py-15 animated-background bg-gradient-to-r from-[#AC7C00] via-[#0F0F0F] to-[#AC7C00]">
-            <div className="items-center pb-10">
+          <div className="min-h-screen bg-cover bg-no-repeat text-white px-6 sm:px-10 md:px-20 pb-10 md:pb-15 ">
+            <div className="items-center">
               {/* Logo */}
               <div className="flex justify-center items-start animate-[HeroFadeInLeft_1s_ease-out]">
                 <img src="/assets/Logo.png" alt="Your Company Logo" className="w-40 sm:w-48 md:w-[200px] h-auto"/>
