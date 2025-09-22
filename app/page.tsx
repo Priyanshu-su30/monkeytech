@@ -364,7 +364,6 @@ export default function Home() {
             </section>
           </div>
 
-
           {/* Services Section */}
           <div className="px-4 sm:px-8 md:px-16 lg:px-32 py-10 text-center bg-[#141414] text-white">
             {/* Header */}
@@ -383,13 +382,13 @@ export default function Home() {
               <div className="h-auto w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left pt-10">
                 
                 {/* Card 1 */}
-                <div className={`relative row-span-2 w-full h-full lg:min-h-screen rounded-xl p-5 bg-gradient-to-b from-[#313131] via-[#241B00] to-[#000000] 
+                <div className={`relative row-span-2 w-full h-full lg:min-h-screen rounded-xl p-5 overflow-hidden bg-gradient-to-b from-[#313131] via-[#241B00] to-[#000000] 
                   ${isAnimated ? 'animate-[fadeInLeft_1s_ease-out_forwards] sm:animate-[fadeInDown_1s_ease-out_forwards] lg:animate-[fadeInLeft_1s_ease-out_forwards]' : 'invisible'}`}>
                   <h1 className="relative z-10 text-xl sm:text-2xl font-semibold">Web Development and Design</h1>
                   <p className="relative z-10 text-xs sm:text-sm md:text-base">
                     Unlock growth, efficiency and innovation with future-ready technology solutions tailored to your unique needs.
                   </p>
-                  <Image src="/assets/WDD1.png" alt="image1" width={350} height={350} className="absolute bottom-0 right-0 w-1/3 sm:w-1/2 lg:w-[300px] z-0" />
+                  <Image src="/assets/WDD1.png" alt="image1" width={300} height={300} className="absolute bottom-0 right-0 w-1/6 sm:w-1/2 lg:w-[300px] z-0" />
                 </div>
 
                 {/* Card 2 */}
@@ -436,7 +435,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-
 
           {/* About Us Section */}
           {/* <div className='bg-[#0F0F0F]'>
@@ -583,49 +581,6 @@ export default function Home() {
 
 
           {/* Footer Section */}
-          {/* <div className='bg-[#141414] py-15 px-24'>
-            <div>
-              <p className='text-5xl font-bold '>Do you have</p>
-              <p className='text-5xl font-bold pb-4'>any questions?</p>
-              <p className='text-lg pb-4'>Feel free to send us your question or request a free consultation</p>
-              <button className='py-1.5 px-4 bg-[#FFC43C] text-md text-black rounded-lg'>Send a message</button>
-              <div className='text-gray-500 text-md py-12'>Disclaimer +</div>
-            </div>
-
-            <div className='text-md flex gap-6'>
-              <div>Services</div>
-              <div>Pricing</div>
-              <div>Sale</div>
-              <div>Blog</div>
-              <div>Contacts</div>
-            </div>
-
-            <div className='py-8 flex justify-between'>
-              <div className='grid grid-cols-2 gap-8'>
-                <div>
-                  <div className='text-lg text-gray-500'>SIGN UP</div>
-                  <div className='text-lg'>+971 585857795</div>
-                  <div className='text-lg'>+971 585605980</div>
-                </div>
-                <div>
-                  <div className='text-lg text-gray-500'>OPENING HOURS</div>
-                  <div className='text-xl'>24/7</div>
-                </div>
-                <div >
-                  <div className='text-lg text-gray-500'>EMAIL</div>
-                  <div className='text-xl'>support@techmonkey.us</div>
-                </div>
-              </div>
-              <div className='text-right pt-10 w-1/3'>                
-                <div className='flex justify-end py-2'>
-                  <img src="https://www.techmonkey.us/_next/image?url=%2Ftechmonkeys2.png&w=640&q=75" alt="Your Company Logo" width={200} height={80}/>
-                </div>
-                <div className='text-md text-gray-500'>At Tech Monkey, we specialize in delivering a range of innovative solutions tailored to meet your business needs</div>
-                <div className='text-md text-gray-500'>© 2024 — Copyright</div>
-              </div>
-            </div>
-          </div> */}
-
           <div className="bg-[#141414] py-10 md:py-15 px-6 sm:px-12 md:px-24 text-white">
             {/* Headline */}
             <div className="text-center md:text-left">
@@ -652,7 +607,7 @@ export default function Home() {
             {/* Bottom Section */}
             <div className="flex flex-col md:flex-row justify-between gap-10">
               {/* Contact Info */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 flex-1">
+              <div className="grid grid-cols-2 gap-6 md:gap-8 flex-1">
                 <div>
                   <div className="text-sm sm:text-lg text-gray-500">SIGN UP</div>
                   <div className="text-base sm:text-lg">+971 585857795</div>
