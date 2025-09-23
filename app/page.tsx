@@ -142,15 +142,15 @@ export default function Home() {
               </div>
 
               {/* Main Section */}
-              <div className="flex flex-col md:flex-row gap-10 pt-16 md:pt-32">
+              <div className="font-sora flex flex-col md:flex-row gap-10 pt-16 md:pt-32">
                 {/* Left Text Section */}
                 <div className="animate-[HeroFadeInLeft_1s_ease-out] text-center md:text-left">
-                  <p className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-normal">
-                    Grow your Business with
+                  <p className="text-3xl sm:text-5xl md:text-6xl lg:text-6xl font-normal">
+                    Grow your Business with{' '}
+                    <span className="text-amber-200">
+                        Tech Monkeys
+                    </span>
                   </p>
-                  <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-amber-200 pt-4 md:pt-6">
-                    Tech Monkeys
-                  </h1>
 
                   <p className="text-base sm:text-lg pt-4 md:pt-6 max-w-xl mx-auto md:mx-0">
                     Unlock growth, efficiency, and innovation with future-ready technology
@@ -202,7 +202,7 @@ export default function Home() {
           </div>
 
           {/*Our Associations Section */}
-          <div className="bg-white py-10 px-6 sm:px-10 md:px-15">
+          <div className="bg-white py-15 px-6 sm:px-10 md:px-15">
             <h2 className="text-center text-xl sm:text-2xl text-gray-800 font-semibold">
               Our Associations
             </h2>
@@ -257,10 +257,10 @@ export default function Home() {
                           <div className="mb-4 sm:mb-6 rounded-full bg-yellow-300/30 px-2 py-1 text-sm sm:text-md border border-white">
                             {slide.superTitle}
                           </div>
-                          <h1 className="text-3xl sm:text-4xl md:text-5xl leading-snug pt-3 sm:pt-3">
+                          <h1 className="font-sora text-3xl sm:text-4xl md:text-5xl leading-snug pt-3 sm:pt-3">
                             {slide.title}
                           </h1>
-                          <p className="text-base sm:text-lg md:text-xl pt-3 sm:pt-3">
+                          <p className="font-geist text-base sm:text-lg md:text-xl pt-3 sm:pt-3">
                             {slide.subtitle}
                           </p>
                           <div className="flex flex-col gap-10 mt-5 sm:mt-5">
@@ -309,11 +309,11 @@ export default function Home() {
           </div>
 
           {/* Services Section */}
-          <div className="px-4 sm:px-8 md:px-16 lg:px-32 py-10 text-center bg-[#141414] text-white">
+          <div className="px-4 sm:px-8 md:px-16 lg:px-32 py-10 min-h-screen text-center bg-[#141414] text-white">
             {/* Header */}
             <div>
-              <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold pb-4">Our Services</h1>
-              <p className="text-sm sm:text-base md:text-lg max-w-5xl mx-auto leading-relaxed text-gray-300">
+              <h1 className="font-sora text-2xl sm:text-3xl md:text-5xl font-bold pb-4">Our Services</h1>
+              <p className="font-geist text-sm sm:text-base md:text-lg max-w-5xl mx-auto leading-relaxed text-gray-300">
                 At Tech Monkey, we deliver innovative, tailored solutions to meet your business needs. 
                 Our experienced team ensures every solution addresses current demands and supports 
                 future growth. We specialize in key tech areas that help your business stay competitive 
@@ -322,14 +322,14 @@ export default function Home() {
             </div>
 
             {/* Cards */}
-            <div onClick={triggerAnimation} className={`min-h-screen flex items-center justify-center ${isAnimated ? '' : 'cursor-pointer '}`}>
+            <div onClick={triggerAnimation} className={`h-full flex items-center justify-center ${isAnimated ? '' : 'cursor-pointer '}`}>
               <div className="h-auto w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left pt-10">
                 
                 {/* Card 1 */}
-                <div className={`relative row-span-2 w-full h-full lg:min-h-screen rounded-xl p-5 overflow-hidden bg-gradient-to-b from-[#313131] via-[#241B00] to-[#000000] 
+                <div className={`relative row-span-2 w-full h-full rounded-xl p-5 overflow-hidden bg-gradient-to-b from-[#313131] via-[#241B00] to-[#000000] 
                   ${isAnimated ? 'animate-[fadeInLeft_1s_ease-out_forwards] sm:animate-[fadeInDown_1s_ease-out_forwards] lg:animate-[fadeInLeft_1s_ease-out_forwards]' : 'invisible'}`}>
-                  <h1 className="relative z-10 text-xl sm:text-2xl font-semibold">Web Development and Design</h1>
-                  <p className="relative z-10 text-xs sm:text-sm md:text-base">
+                  <h1 className="font-sora relative z-10 text-xl sm:text-2xl font-semibold">Web Development and Design</h1>
+                  <p className="font-geist relative z-10 text-xs sm:text-sm md:text-base pb-80">
                     Unlock growth, efficiency and innovation with future-ready technology solutions tailored to your unique needs.
                   </p>
                   <Image src="/assets/WDD1.png" alt="image1" width={300} height={300} className="absolute bottom-0 right-0 w-1/6 sm:w-1/2 lg:w-[300px] z-0" />
@@ -338,8 +338,8 @@ export default function Home() {
                 {/* Card 2 */}
                 <div className={`relative rounded-xl p-5 bg-gradient-to-b from-[#313131] via-[#000000] to-[#241B00]
                               ${isAnimated ? 'animate-[fadeInLeft_1s_ease-out_forwards] sm:animate-[fadeInDown_1s_ease-out_forwards]' : 'invisible'}`}>
-                  <h1 className="relative z-10 text-xl sm:text-2xl font-semibold">Mobile App Development</h1>
-                  <p className="relative z-10 text-xs sm:text-sm md:text-base">
+                  <h1 className="font-sora relative z-10 text-xl sm:text-2xl font-semibold">Mobile App Development</h1>
+                  <p className="font-geist relative z-10 text-xs sm:text-sm md:text-base">
                     Unlock growth, efficiency and innovation with future-ready technology solutions tailored to your unique needs.
                   </p>
                   <Image src="/assets/MAD1.png" alt="image2" width={100} height={100} className="absolute bottom-0 right-5 w-16 sm:w-20 md:w-[100px] z-0" />
@@ -349,8 +349,8 @@ export default function Home() {
                 {/* Card 3 */}
                 <div className={`relative rounded-xl p-5 bg-gradient-to-b from-[#313131] via-[#000000] to-[#241B00]
                               ${isAnimated ? 'animate-[fadeInLeft_1s_ease-out_forwards] sm:animate-[fadeInRight_1s_ease-out_forwards]' : 'invisible'}`}>
-                  <h1 className="relative z-10 text-xl sm:text-2xl font-semibold">Real Estate Solutions</h1>
-                  <p className="relative z-10 text-xs sm:text-sm md:text-base">
+                  <h1 className="font-sora relative z-10 text-xl sm:text-2xl font-semibold">Real Estate Solutions</h1>
+                  <p className="font-geist relative z-10 text-xs sm:text-sm md:text-base">
                     Unlock growth, efficiency and innovation with future-ready technology solutions tailored to your unique needs.
                   </p>
                   <Image src="/assets/RES1.png" alt="image4" width={150} height={150} className="absolute bottom-0 right-0 w-20 sm:w-28 md:w-[150px] z-0" />
@@ -359,8 +359,8 @@ export default function Home() {
                 {/* Card 4 */}
                 <div className={`relative rounded-xl p-5 bg-gradient-to-b from-[#313131] via-[#000000] to-[#241B00]
                               ${isAnimated ? 'animate-[fadeInLeft_1s_ease-out_forwards] sm:animate-[fadeInUp_1s_ease-out_forwards]' : 'invisible'}`}>
-                  <h1 className="relative z-10 text-xl sm:text-2xl font-semibold">E-Commerce Solutions</h1>
-                  <p className="relative z-10 text-xs sm:text-sm md:text-base">
+                  <h1 className="font-sora relative z-10 text-xl sm:text-2xl font-semibold">E-Commerce Solutions</h1>
+                  <p className="font-geist relative z-10 text-xs sm:text-sm md:text-base">
                     Unlock growth, efficiency and innovation with future-ready technology solutions tailored to your unique needs.
                   </p>
                   <Image src="/assets/ECS1.png" alt="image5" width={150} height={150} className="absolute bottom-0 right-0 w-20 sm:w-28 md:w-[150px] z-0" />
@@ -369,8 +369,8 @@ export default function Home() {
                 {/* Card 5 */}
                 <div className={`relative rounded-xl p-5 bg-gradient-to-b from-[#313131] via-[#000000] to-[#241B00]
                               ${isAnimated ? 'animate-[fadeInLeft_1s_ease-out_forwards] sm:animate-[fadeInUp_1s_ease-out_forwards] lg:animate-[fadeInRight_1s_ease-out_forwards]' : 'invisible'}`}>
-                  <h1 className="relative z-10 text-xl sm:text-2xl font-semibold">Tech Support & Consulting</h1>
-                  <p className="relative z-10 text-xs sm:text-sm md:text-base">
+                  <h1 className="font-sora relative z-10 text-xl sm:text-2xl font-semibold">Tech Support & Consulting</h1>
+                  <p className="font-geist relative z-10 text-xs sm:text-sm md:text-base">
                     Unlock growth, efficiency and innovation with future-ready technology solutions tailored to your unique needs.
                   </p>
                   <Image src="/assets/TSC.png" alt="image6" width={150} height={150} className="absolute bottom-0 right-0 w-20 sm:w-28 md:w-[150px] z-0" />
@@ -384,8 +384,8 @@ export default function Home() {
           <div className="bg-[#0F0F0F] text-white">
             {/* About Us Section */}
             <div className="px-4 sm:px-8 md:px-16 lg:px-32 text-center py-10 md:py-20">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold pb-4">About Us</h1>
-              <p className="text-sm sm:text-base md:text-lg tracking-wide leading-relaxed text-gray-300">
+              <h1 className="font-sora text-2xl sm:text-3xl md:text-4xl font-bold pb-4">About Us</h1>
+              <p className="font-geist text-sm sm:text-base md:text-lg tracking-wide leading-relaxed text-gray-300">
                 Tech Monkey is a dynamic tech company founded by Varun, an Oxford MBA with extensive
                 expertise in entrepreneurship, and Jainam, a visionary entrepreneur who co-built and
                 sold their IT startup to Amazon alongside Varun. Together, they bring over eight years
@@ -409,7 +409,7 @@ export default function Home() {
                   className="rounded-md bg-gradient-to-br from-yellow-300 to-black p-0.5"
                 >
                   <div className="w-full h-full rounded-md bg-black p-6 font-thin text-center sm:text-left">
-                    <h3 className="text-base sm:text-lg font-medium mb-2">{card.title}</h3>
+                    <h3 className="font-sora text-base sm:text-lg font-medium mb-2">{card.title}</h3>
                     <p className="text-2xl sm:text-3xl md:text-4xl font-bold">
                       <CountUp
                         from={1}
@@ -429,7 +429,7 @@ export default function Home() {
           {/* Testimonials */}
           <div className="bg-[#141414] py-10 bg-radial-[at_50%_125%] from-yellow-600 to-zinc-900 to-75%">
             {/* Heading */}
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold flex justify-center items-center text-white">
+            <h1 className="font-sora text-2xl sm:text-3xl md:text-4xl font-bold flex justify-center items-center text-white">
               Testimonials
             </h1>
 
@@ -468,7 +468,7 @@ export default function Home() {
 
 
           {/* Footer Section */}
-          <div className="bg-[#141414] py-10 md:py-15 px-6 sm:px-12 md:px-24 text-white">
+          <div className="font-inter bg-[#141414] py-10 md:py-15 px-6 sm:px-12 md:px-24 text-white">
             {/* Headline */}
             <div className="text-center md:text-left">
               <p className="text-3xl sm:text-4xl md:text-5xl font-bold">Do you have</p>

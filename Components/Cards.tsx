@@ -45,7 +45,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
   const { name, title, text, rating, avatarUrl } = testimonial;
   return (
     <div className="relative flex-shrink-0 w-xl md:w-3xl bg-[#121212] border border-gray-800 rounded-2xl pl-4 pr-12 py-6 text-white space-y-6">
-      <div className="relative z-10 flex items-center space-x-2">
+      <div className="font-geist relative z-10 flex items-center space-x-2">
         <img
           src={avatarUrl}
           alt={name}
