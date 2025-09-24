@@ -181,6 +181,52 @@
     }
   }
 
+@keyframes cloudWave {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-20%); /* Moves left */
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes wave-move {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes wave-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Custom class for the wavy background effect */
+.wavy-yellow-bg {
+  /* Start with a black background */
+  background-color: #000; 
+  /* Overlay a radial gradient for a soft, cloudy wave effect */
+  background-image: 
+    radial-gradient(ellipse at 50% -10%, #FFD700 0%, transparent 70%), /* Yellow 'wave' source */
+    radial-gradient(ellipse at 10% -20%, #DAA520 0%, transparent 60%), /* Another yellow 'wave' source */
+    radial-gradient(ellipse at 90% -30%, #FFCC00 0%, transparent 50%); /* A third for more complexity */
+  
+  /* Make the background very large to allow for movement */
+  background-size: 300% 300%; 
+  /* Apply the animation */
+  animation: wave-move 25s ease-in-out infinite alternate;
+}
+
   /* Define Animation Utility Classes */
   .animate-fadeInLeft {
     animation: fadeInLeft 1s ease-out forwards;

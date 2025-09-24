@@ -4,7 +4,6 @@ import React, { useState, useRef, MouseEvent } from 'react';
 import TestimonialCard from '@/Components/Cards';
 import {Avatar, AvatarFallback, AvatarImage, } from "../Components/ui/avatar"
 import Image from 'next/image';
-import Aurora from '@/Components/Aurora';
 
 type Slide = {
   superTitle: string;
@@ -129,12 +128,11 @@ export default function Home() {
   return (
     <div className="bg-[#0F0F0F] flex items-center justify-center">
 
-      <div className="relative w-full bg-[#0F0F0F] rounded-4xl shadow-2xl flex flex-col">
+      <div className="relative w-full bg-[#0F0F0F] flex flex-col wavy-yellow-bg ">
 
         <div className="h-full overflow-y-auto no-scrollbar">
-        <Aurora colorStops={["#AC7C00", "#AC7C00", "#AC7C00"]} blend={0.5} amplitude={1.0} speed={0.5} />
           {/* Hero Section */}
-          <div className="min-h-screen bg-cover bg-no-repeat text-white px-6 sm:px-10 md:px-20 pb-10 md:pb-15 ">
+          <div className="min-h-[95dvh] bg-cover bg-no-repeat text-white px-6 sm:px-10 md:px-20 py-10 sm:py-5 md:py-15">
             <div className="items-center">
               {/* Logo */}
               <div className="flex justify-center items-start animate-[HeroFadeInLeft_1s_ease-out]">
@@ -242,7 +240,7 @@ export default function Home() {
               <div className="relative w-full overflow-hidden rounded-2xl">
 
                 {/* Main Content & Image Container */}
-                <div className="relative min-h-screen md:h-auto">
+                <div className="relative min-h-screen ">
                   {slidesData.map((slide, index) => (
                     <div
                       key={index}
@@ -250,14 +248,14 @@ export default function Home() {
                         activeIndex === index ? 'opacity-100' : 'opacity-0'
                       }`}
                     >
-                      <div className="bg-gradient-to-br from-[#FFD34D] to-[#B48700] h-full flex flex-col md:flex-row gap-6 md:gap-10">
+                      <div className="bg-gradient-to-br from-[#FFD34D] to-[#B48700] h-full flex flex-col lg:flex-row ">
 
-                        {/* Left Side: Text Content */}
-                        <div className="flex flex-col justify-between text-black px-4 py-10 sm:p-6 md:p-10 lg:p-15 md:w-1/2">
-                          <div className="mb-4 sm:mb-6 rounded-full bg-yellow-300/30 px-2 py-1 text-sm sm:text-md border border-white">
+                        {/* Left Side: Text Content px-4 py-10 sm:p-6 md:p-10 lg:p-15 */}
+                        <div className="flex flex-col justify-between text-black py-10 sm:p-6 md:pl-10 lg:pl-15 w-1/2">
+                          <div className="font-inter mb-4 sm:mb-6 rounded-full bg-yellow-300/30 px-2 py-1 text-md sm:text-lg border border-white">
                             {slide.superTitle}
                           </div>
-                          <h1 className="font-sora text-3xl sm:text-4xl md:text-5xl leading-snug pt-3 sm:pt-3">
+                          <h1 className="font-sora text-xl sm:text-2xl md:text-3xl lg:text-5xl leading-snug pt-3 sm:pt-3">
                             {slide.title}
                           </h1>
                           <p className="font-geist text-base sm:text-lg md:text-xl pt-3 sm:pt-3">
@@ -265,7 +263,7 @@ export default function Home() {
                           </p>
                           <div className="flex flex-col gap-10 mt-5 sm:mt-5">
                             <div>
-                              <button className="text-lg sm:text-xl rounded-full bg-gray-900 px-6 sm:px-8 py-3 sm:py-4 text-white transition hover:bg-gray-800">
+                              <button className="text-md sm:text-md rounded-full bg-gray-900 px-6 sm:px-8 py-3 sm:py-4 text-white transition hover:bg-gray-800">
                                 View Project
                               </button>
                             </div>
@@ -287,14 +285,14 @@ export default function Home() {
                         </div>
 
                         {/* Right Side: Embed */}
-                        <div className="relative h-full md:block">
+                        <div className="relative h-full w-full">
                           <iframe
                             src={slide.websiteUrl}
                             title={slide.title}
-                            width={800}
-                            height={800}
+                            width={400}
+                            height={900}
                             scrolling="no"
-                            className=" md:scale-[0.85] scale-100 origin-bottom-right rounded-tl-[20px] sm:rounded-tl-[30px] md:rounded-tl-[40px]"
+                            className="object-cover w-full h-full md:scale-[0.85] scale-100 origin-bottom-right rounded-tl-[20px] sm:rounded-tl-[30px] md:rounded-tl-[40px] py-10"
                             loading="lazy"
                           />
                         </div>
